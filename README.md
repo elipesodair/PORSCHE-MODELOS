@@ -1,3 +1,4 @@
+#Projeto desenvolvido Imersão Alura Google-Gemini
 # Pesquisa de Modelos Porsche
 
 Este é um projeto de site simples que permite ao usuário pesquisar modelos de carros da Porsche. O site fornece informações detalhadas sobre cada modelo, como título, descrição, tags associadas e um link para mais informações. A pesquisa pode ser feita por nome do modelo, descrição ou tags.
@@ -28,6 +29,10 @@ Este é um projeto de site simples que permite ao usuário pesquisar modelos de 
    - Localize o arquivo `index.html` na pasta do projeto e abra-o em seu navegador de preferência.
 
 ## Contribuições
+
+
+##Link
+https://porsche-modelos.vercel.app/
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*.
 
