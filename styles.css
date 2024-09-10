@@ -1,6 +1,13 @@
 /* Importa a fonte Chakra Petch do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+/* Reset básico para o CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Estiliza o corpo da página */
 body {
     font-family: "Chakra Petch", sans-serif;
@@ -10,6 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    align-items: center;
 }
 
 /* Estiliza o header */
@@ -18,32 +26,41 @@ header {
     color: #F5F7F8;
     padding: 1rem;
     text-align: center;
+    width: 100%;
 }
 
 /* Estiliza o main */
 main {
     flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 1rem;
+    align-items: center; /* Centraliza os elementos horizontalmente */
 }
 
 /* Estiliza a seção de pesquisa */
 #pesquisa {
     margin-bottom: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px; /* Limita a largura máxima em telas maiores */
 }
 
 #pesquisa input {
-    width: 30rem;
-    padding: 1rem;
+    flex: 1;
+    padding: 0.75rem;
     border-radius: 1.5rem;
     border: 1px solid #30475E;
-    margin-right: 0.5rem;
+    width: 100%;
+    max-width: 400px; /* Limita a largura máxima do input */
 }
 
 #pesquisa button {
-    padding: 1rem 2rem;
+    padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 1.5rem;
     background-color: #30475E;
@@ -58,7 +75,7 @@ main {
 
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
-    width: 80%;
+    width: 100%;
     max-width: 1200px;
     margin-top: 1rem;
     padding: 1rem;
@@ -70,21 +87,25 @@ main {
 /* Estiliza cada item de resultado */
 .item-resultado {
     display: flex;
+    flex-direction: column;
     align-items: center;
     border-bottom: 1px solid #ddd;
     padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .item-resultado img {
-    width: 150px;
+    width: 100%;
+    max-width: 300px;
     height: auto;
     border-radius: 0.6rem;
-    margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 
 .item-resultado h2 {
-    font-size: 1.5rem;
-    margin: 0;
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
 }
 
 .item-resultado p {
@@ -114,7 +135,7 @@ main {
     background-color: #F0F0F0;
     border-radius: 1rem;
     padding: 0.3rem 0.8rem;
-    margin-right: 0.5rem;
+    margin: 0.3rem;
     color: #30475E;
 }
 
@@ -124,28 +145,46 @@ footer {
     color: #F5F7F8;
     text-align: center;
     padding: 1rem;
+    width: 100%;
     position: relative;
     bottom: 0;
-    width: 100%;
 }
 
-/* Responsividade */
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
-    #pesquisa input {
-        width: 25rem;
+    #pesquisa {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #pesquisa input, 
+    #pesquisa button {
+        width: 100%;
+        max-width: none; /* Remove a limitação de largura em telas menores */
     }
 
     .item-resultado {
-        flex-direction: column;
-        align-items: flex-start;
+        padding: 0.5rem 0;
     }
 
     .item-resultado img {
-        margin-bottom: 1rem;
+        max-width: 250px;
+    }
+
+    .item-resultado h2 {
+        font-size: 1.1rem;
     }
 }
 
 @media (max-width: 480px) {
+    .item-resultado img {
+        width: 100%;
+    }
+
+    .item-resultado h2 {
+        font-size: 1rem;
+    }
+
     #pesquisa input {
         width: 100%;
     }
@@ -153,9 +192,5 @@ footer {
     #pesquisa button {
         width: 100%;
         margin-top: 0.5rem;
-    }
-
-    .item-resultado img {
-        width: 100%;
     }
 }
