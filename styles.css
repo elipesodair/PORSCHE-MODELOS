@@ -88,13 +88,14 @@ main {
 .item-resultado {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Alinha o conteúdo ao centro */
     border-bottom: 1px solid #ddd;
-    padding: 1rem 0;
+    padding: 1rem;
     text-align: center;
     margin-bottom: 1rem;
 }
 
+/* Ajusta o tamanho da imagem para centralizar melhor em telas menores */
 .item-resultado img {
     width: 100%;
     max-width: 300px;
@@ -103,6 +104,7 @@ main {
     margin-bottom: 1rem;
 }
 
+/* Ajusta o título e descrição para centralizar e se adaptar a telas menores */
 .item-resultado h2 {
     font-size: 1.25rem;
     margin: 0.5rem 0;
@@ -164,7 +166,9 @@ footer {
     }
 
     .item-resultado {
-        padding: 0.5rem 0;
+        padding: 0.5rem;
+        /* Adiciona uma margem lateral para melhorar o alinhamento */
+        margin: 0 1rem;
     }
 
     .item-resultado img {
